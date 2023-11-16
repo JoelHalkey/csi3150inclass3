@@ -29,7 +29,7 @@ const Counter = () => {
         if (inputValue === '' || isNaN(inputValue)) {
             setCounter(0); // Set count to 0 if the input is empty or not a number
           } else {
-            setCounter(parseInt(inputValue, 10)); // Parse input value to integer and update count
+            setCounter(parseInt(inputValue)); // Parse input value to integer and update count
           }
 
         console.log(counter);
