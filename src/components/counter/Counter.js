@@ -24,7 +24,14 @@ const Counter = () => {
     //Allows for the change of the input field
     function handleChange(e){
         e.preventDefault();
-        setCounter(parseInt(e.target.value));
+
+        const inputValue = e.target.value;
+        if (inputValue === '' || isNaN(inputValue)) {
+            setCounter(0); // Set count to 0 if the input is empty or not a number
+          } else {
+            setCounter(parseInt(inputValue, 10)); // Parse input value to integer and update count
+          }
+
         console.log(counter);
     }
 
